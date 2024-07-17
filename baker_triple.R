@@ -14,3 +14,5 @@ df_td_count <- df_baker %>%
   dplyr::count(receiver_player_name) %>% 
   # dplyr::filter(n >= 10) %>% 
   dplyr::arrange(dplyr::desc(n))
+
+readr::write_csv(df_td_count, file = "./dat/baker_td_receivers_2018-2023.csv")
